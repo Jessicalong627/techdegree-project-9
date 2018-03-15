@@ -3,9 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>My App</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
 
+
+
+    <div class="container">
+      <div class="header">
+          <ul class = "top-nav">
+            <li><strong>Jackie</strong>App&trade;</li>
+            <li><img class="bell" src="icons/icon-bell.svg" alt="bell" width="25px"><p class ="circle"></p></li>
+            <li><img class="avatar" src="icons/5.jpg" alt="avatar" width="40px"></li>
+            <li>Jackie Craft</li>
+
+          </ul>
+      </div>
+
+      <div class="nav">
+        <ul class="left-nav">
+          <li><a href="dashboard"><img src="icons/icon-dashboard.svg" alt="dashboard" width="25px"> </a> </li>
+          <li><a href="members"><img src="icons/icon-members.svg" alt="members" width="25px"></a></li>
+          <li><a href="visits"><img src="icons/icon-visits.svg" alt="visits" width="25px"></a></li>
+          <li><a href="settings"><img src="icons/icon-settings.svg" alt="settings" width="25px"></a></li>
+
+        </ul>
+      </div>
+
+      <div class="main">
+        <div class="alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Alert!</strong> You have five new members today!
+        </div>
+      </div>
+
+      <div class="aside">aside</div>
+      <div class="section">section</div>
+  </div>
+
+
+    <script src="js/scripts.js"></script>
   </body>
 </html>
