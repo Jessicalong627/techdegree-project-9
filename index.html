@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
@@ -16,9 +17,9 @@
     <div class="container">
       <div class="header">
           <ul class = "top-nav">
-            <li><strong>Jackie</strong>App&trade;</li>
+            <li class="name"><strong>Jackie</strong>App&trade;</li>
             <li><img class="bell" src="icons/icon-bell.svg" alt="bell" width="25px"><p class ="circle"></p></li>
-            <li><img class="avatar" src="icons/5.jpg" alt="avatar" width="40px"></li>
+            <li class="border"><img class="avatar" src="icons/5.jpg" alt="avatar" height= "40px" width="40px"></li>
             <li>Jackie Craft</li>
 
           </ul>
@@ -35,17 +36,43 @@
       </div>
 
       <div class="main">
-        <div class="alert">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-          <strong>Alert!</strong> You have five new members today!
-        </div>
+          <div class="search">
+              <h2> Dashboard </h2> <input class="searchBar" type='text' placeholder='Search' id='search-text-input' />
+
+          </div>
+
+
+          <div class="lineChart">
+                <div class="container">
+                  <canvas id="lineChart" ></canvas>
+      </div>
+          </div>
+
+          <div class="barChart">
+            <div class="container">
+              <canvas id="barChart" ></canvas>
+            </div>
+          </div>
+
+          <div class="donutChart">
+            <div class="container">
+              <canvas id="donutChart"></canvas>
+            </div>
+          </div>
+
+
+
+
+     </div>
+
+
+      <div class="aside"> aside
+      </div>
+      <div class="section">section
+
       </div>
 
-      <div class="aside">aside</div>
-      <div class="section">section</div>
-  </div>
-
-
-    <script src="js/scripts.js"></script>
+</div>
+    <script src="js/script.js"></script>
   </body>
 </html>
