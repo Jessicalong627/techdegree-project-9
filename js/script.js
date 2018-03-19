@@ -14,6 +14,7 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+      responsive: true,
       title: {
        },
         legend: {
@@ -42,15 +43,13 @@ var myDoughnutChart = new Chart(ctx, {
         }]
     },
     options: {
+      responsive: true,
       legend: {
         position: "right"
       },
       layout: {
         padding: {
-                  left: 0,
-                   right: 0,
-                   top: 0,
-                   bottom: 0
+                  
         }
 
       }
@@ -60,7 +59,8 @@ var myDoughnutChart = new Chart(ctx, {
 });
 
 
-// line chart //
+              // line chart //
+
 var ctx = document.getElementById("lineChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -91,6 +91,7 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+      responsive: true,
       title: {
         },
         legend: {

@@ -5,10 +5,11 @@
 
 /*                    Alert Button                       */
 .alert {
-    padding: 10px;
+    padding: 10px 0px;
     background-color: #5f669a;
     color: white;
-    margin: 10px;
+  	margin-bottom:10px;
+		margin-top: 10px;
 }
 
 .closebtn {
@@ -53,14 +54,8 @@
 
 .aside {
  grid-area: aside;
- background-color: #6ad78a;
-}
 
- .section {
- grid-area: section;
- background-color: #6e859c;
 }
-
 
 
 /*               header                       */
@@ -111,13 +106,13 @@ ul{
    grid-area: main;
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 80px minmax(20px, auto);
-   background-color: #aad2ed;
+   grid-template-rows: 130px minmax(20px, auto) auto 270px;
+
    grid-template-areas:
    "search"
    "line"
    "bar"
-   "donut";
+   "donut"
   }
 
   .search {
@@ -125,18 +120,42 @@ ul{
     grid-area: search;
   }
   .lineChart {
-		background-color: #fbfbfb;
+		padding-top: 5px;
     grid-area: line;
 
   }
   .barChart {
     grid-area: bar;
-    background-color: #ff0055;
+		padding-top: 15px;
+
   }
   .donutChart {
     grid-area: donut;
-    background-color: pink;
+
   }
+
+	.bar
+	{
+		width: 400px;
+		margin: 0 auto;
+	}
+
+	.line {
+		width: 400px;
+		margin: 0 auto;
+	}
+
+	.donut {
+	margin: 0 auto;
+	width: 300px;
+	}
+	#donutChart{
+		margin-top: -31px;
+	}
+
+	.mobile {
+		padding-top: 33px;
+	}
 /* search bar */
 
   #search-text-input {
@@ -152,19 +171,96 @@ ul{
     padding: 5px;
     text-align: center;
   }
+	.timeline {
+		margin-bottom: 0;
+		margin-top: 0;
+		text-align: right;
+	}
+	.traffic {
+		margin-right: 35px;
+	}
+	.timeline li {
+		color: black;
+		list-style-type: none;
+		display: inline-block;
+		padding-bottom: 5px;
 
+	}
+	.timeline li:hover {
+		color: white;
+		background-color: #51ba83;
+		border-radius: 10%;
+		padding: 5px;
+	}
 
   h2 {
     margin-top: 40px;
     display: inline;
-    background-color: white;
   }
 
-  /*   charts */
+/*       social stats        */
 
+	.icons {
+		border: 1px solid black;
+		background-color: #fbfbfb;
+		margin-bottom: 10px;
+		text-align: center;
+		padding: 20px 160px;
+	}
 
+	.icons svg {
+		background-color:#5f669a;
+		padding: 12px;
+		width: 60px;
+		fill: white;
 
+	}
+	.social {
+		color:#5f669a;
+		margin-bottom: 0;
+		display: inline-block;
+	}
 
+	.group {
+		display: inline-block;
+		padding-left: 15px;
+
+	}
+	.aside {
+		margin: 0 auto;
+
+	}
+/*              section                 */
+
+.section {
+ grid-area: section;
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 275px 275px 275px 275px;
+
+ grid-template-areas:
+ "members"
+ "activity"
+ "users"
+ "settings";
+}
+
+.members {
+	grid-area:members;
+	background-color:#1a8b49;
+}
+.activity {
+	grid-area:activity;
+	 background-color: #535485;
+}
+.users{
+	grid-area:users;
+	 background-color: #856c53;
+}
+.settings {
+	grid-area:settings;
+	 background-color: #bd1d5d;
+}
 
 
 /*              Media Queries                   */
@@ -195,8 +291,11 @@ ul{
     padding-right: 85px;
   }
 
+	.traffic {
+		margin-right: 225px;
+	}
 
-}
+
 
 /* main  */
 #search-text-input {
@@ -204,13 +303,43 @@ ul{
 }
 .main {
   grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100px minmax(20px, auto) 270px;
   grid-template-areas:
   "search search"
   "line line"
   "bar donut";
 }
 
+.bar {
+	padding-top: 15px;
+}
 
+.line {
+	padding-top: 10px;
+	width: 600px;
+	margin: 0 auto;
+}
+.icons {
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	padding: 5px 45px 15px;
+	margin-bottom: 20px;
+}
+
+
+.section {
+ grid-area: section;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 275px 275px;
+
+ grid-template-areas:
+ "members activity"
+ "users settings";
+}
+
+}
 
                     /* Desktop */
 
@@ -261,6 +390,27 @@ ul{
      #search-text-input {
        margin-left: 500px;
      }
+		 .main {
+		   grid-template-columns: 1fr 1fr;
+		 	grid-template-rows: 100px 480px 270px;
+		   grid-template-areas:
+		   "search search"
+		   "line line"
+		   "bar donut";
+		 }
+		 .line {
+		 	padding-top: 10px;
+		 	width: 900px;
+		 	margin: 0 auto;
+		 }
+		 .traffic {
+	 		margin-right: 500px;
+	 	}
 
+		.icons {
+
+			margin-left: 70px;
+			padding-right: 60px;
+		}
 
 }
