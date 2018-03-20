@@ -49,7 +49,7 @@ var myDoughnutChart = new Chart(ctx, {
       },
       layout: {
         padding: {
-                  
+
         }
 
       }

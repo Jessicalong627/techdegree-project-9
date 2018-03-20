@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+
 }
 
 /*                    Alert Button                       */
@@ -54,7 +55,7 @@
 
 .aside {
  grid-area: aside;
-
+padding-top: 0;
 }
 
 
@@ -83,7 +84,7 @@ padding-bottom: 10px;
 
 /*              nav bar                    */
 
-ul{
+ul {
   list-style-type: none;
   color: white;
 
@@ -106,7 +107,7 @@ ul{
    grid-area: main;
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 130px minmax(20px, auto) auto 270px;
+   grid-template-rows: 130px minmax(20px, auto) auto 340px;
 
    grid-template-areas:
    "search"
@@ -122,33 +123,35 @@ ul{
   .lineChart {
 		padding-top: 5px;
     grid-area: line;
-
+		border-bottom: 1px solid #d2d2d2;
   }
   .barChart {
     grid-area: bar;
 		padding-top: 15px;
+		border-right: 1px solid #d2d2d2;
 
   }
   .donutChart {
     grid-area: donut;
-
   }
 
 	.bar
 	{
 		width: 400px;
 		margin: 0 auto;
+
 	}
 
 	.line {
-		width: 400px;
+		width:400px;
 		margin: 0 auto;
-	}
 
+	}
 	.donut {
 	margin: 0 auto;
 	width: 300px;
 	}
+
 	#donutChart{
 		margin-top: -31px;
 	}
@@ -197,11 +200,18 @@ ul{
     margin-top: 40px;
     display: inline;
   }
+	h3{
+		padding-left: 5px;
+		padding-bottom: 0px;
+		margin-bottom: 5px;
+	}
+
 
 /*       social stats        */
 
 	.icons {
 		border: 1px solid black;
+		border-color: #d2d2d2;
 		background-color: #fbfbfb;
 		margin-bottom: 10px;
 		text-align: center;
@@ -220,10 +230,14 @@ ul{
 		margin-bottom: 0;
 		display: inline-block;
 	}
+	.socialStats{
+		margin: 0 auto;
+
+	}
 
 	.group {
 		display: inline-block;
-		padding-left: 15px;
+		padding-left: 5px;
 
 	}
 	.aside {
@@ -236,7 +250,7 @@ ul{
  grid-area: section;
  display: grid;
  grid-template-columns: 1fr;
- grid-template-rows: 275px 275px 275px 275px;
+ grid-template-rows: 325px 325px 325px 300px;
 
  grid-template-areas:
  "members"
@@ -247,24 +261,156 @@ ul{
 
 .members {
 	grid-area:members;
-	background-color:#1a8b49;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-right: 1px solid #d2d2d2;
+
 }
+
 .activity {
-	grid-area:activity;
-	 background-color: #535485;
+	 grid-area:activity;
+	 padding-top: 5px;
+	 padding-left: 5px;
+ 	 padding-right: 5px;
 }
 .users{
 	grid-area:users;
-	 background-color: #856c53;
+
+	border-right: 1px solid #d2d2d2;
+
 }
 .settings {
 	grid-area:settings;
-	 background-color: #bd1d5d;
+	background: pink;
+}
+
+/*              members section                  */
+ .main {
+	 border-bottom: 1px solid #d2d2d2;
+ }
+ .section {
+	 border-top: 1px solid #d2d2d2;
+ }
+	.memberOne{
+		padding-top: 3px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #d2d2d2;
+	}
+	.date {
+		text-align: right;
+		display: inline-block;
+		float: right;
+		margin-top:0;
+		color:black;
+	}
+
+	.sectionTwo {
+		padding-right:5px;
+		padding-left: 5px;
+	}
+	.name {
+	display: inline-block;
+	color:black;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 13px;
+	}
+	.names {
+	display: inline-block;
+	color:white;
+	text-align: center;
+	}
+
+	.icon {
+		display: inline;
+		margin-bottom: -25px;
+		border-radius: 50%;
+	}
+	.email {
+		padding-left: 42px;
+    display: inline-block;
+		color: #535485;
+		margin-top: 0;
+		margin-bottom: 3px
+	}
+
+/*              activity section                  */
+	.days {
+		padding-left: 44px;
+		display: inline-block;
+		color: black;
+		margin-top: 0px;
+		margin-bottom: 3px;
+	}
+	.arrow {
+		text-align: right;
+		color:black;
+		display: inline-block;
+		float: right;
+		padding-right: 5px;
+		margin-top:-16px;
+		font-size: 26px;
+	}
+
+/*              users section                  */
+.send {
+    background-color: #7377bf;
+    border: none;
+    color: white;
+    padding: 15px 160px;
+    text-align: center;
+    font-size: 16px;
+		display: block;
+		margin: 0 auto;
+}
+
+#select_username {
+	text-align: left;
+	background-color: #fbfbfb;
+	display: block;
+	margin: 0 auto;
+	padding: 10px 95px;
+}
+#message {
+	display: block;
+	margin: 0 auto;
+	background-color: #fbfbfb;
+	padding: 50px 95px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
+/*              settings section
+             */
+select {
+padding: 15px 30px;
+background-color: lightgrey;
+}
+.settingsButton {
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+		margin: 0 auto;
+}
+
+.save {
+	background-color: #7377bf;
+	text-align: center;
+}
+.cancel {
+	background-color: #b2b2b2;
+	text-align: center;
+}
+
+
+
 /*              Media Queries                   */
-/* Tablet */
+								/* Tablet */
 
 @media (min-width: 768px) {
   /* nav/header*/
@@ -303,7 +449,7 @@ ul{
 }
 .main {
   grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100px minmax(20px, auto) 270px;
+	grid-template-rows: 100px minmax(20px, auto) 340px;
   grid-template-areas:
   "search search"
   "line line"
@@ -332,13 +478,18 @@ ul{
  grid-area: section;
  display: grid;
  grid-template-columns: 1fr 1fr;
- grid-template-rows: 275px 275px;
+ grid-template-rows: 300px 325px;
 
  grid-template-areas:
  "members activity"
  "users settings";
 }
-
+ .name{
+	 font-size:10px;
+ }
+ .dailyTraffic{
+	 padding-left: 5px;
+ }
 }
 
                     /* Desktop */
@@ -354,6 +505,19 @@ ul{
      "nav aside"
      "nav section";
    }
+	 .section {
+	  grid-area: section;
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 350px 325px;
+
+	  grid-template-areas:
+	  "members activity"
+	  "users settings";
+	 }
+	 .header{
+		 padding-bottom: 10px;
+	 }
 
    .left-nav {
      flex-direction: column;
@@ -367,7 +531,7 @@ ul{
      padding-bottom: 30px;
      margin-left: 60px;
    }
-   .name {
+   .names {
      margin-right: auto;
    }
 
@@ -392,7 +556,7 @@ ul{
      }
 		 .main {
 		   grid-template-columns: 1fr 1fr;
-		 	grid-template-rows: 100px 480px 270px;
+		 	grid-template-rows: 100px 550px 340px;
 		   grid-template-areas:
 		   "search search"
 		   "line line"
@@ -408,9 +572,20 @@ ul{
 	 	}
 
 		.icons {
-
-			margin-left: 70px;
+			margin-left: 50px;
 			padding-right: 60px;
+		}
+		.name{
+	 	 font-size:16px;
+	  }
+		#select_username {
+			padding: 10px 140px;
+		}
+		#message {
+			padding: 50px 140px;
+		}
+		.send {
+		    padding: 15px 210px;
 		}
 
 }
