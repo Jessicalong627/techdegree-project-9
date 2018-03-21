@@ -105,3 +105,17 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+const button = document.getElementById("btn");
+const user = document.getElementById("select_username");
+const message = document.getElementById("message");
+
+button.addEventListener("click", function(){
+    event.preventDefault();
+    if (user.value === "" || message.value === "" ){
+      document.getElementById("success").innerHTML = "Please fill out both fields"; success.style.backgroundColor = "red";
+    }
+    else {
+      document.getElementById("success").innerHTML = "Message Sent";
+    }
+
+});

@@ -6,7 +6,7 @@
 
 /*                    Alert Button                       */
 .alert {
-    padding: 10px 0px;
+    padding: 10px 5px;
     background-color: #5f669a;
     color: white;
   	margin-bottom:10px;
@@ -25,6 +25,13 @@
 
 .closebtn:hover {
     color: black;
+}
+
+#success {
+	text-align: center;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px;
 }
 
 
@@ -250,7 +257,7 @@ ul {
  grid-area: section;
  display: grid;
  grid-template-columns: 1fr;
- grid-template-rows: 325px 325px 325px 300px;
+ grid-template-rows: 325px 325px 350px 300px;
 
  grid-template-areas:
  "members"
@@ -282,7 +289,6 @@ ul {
 }
 .settings {
 	grid-area:settings;
-	background: pink;
 }
 
 /*              members section                  */
@@ -356,6 +362,7 @@ ul {
 /*              users section                  */
 .send {
     background-color: #7377bf;
+		border-radius: 10px;
     border: none;
     color: white;
     padding: 15px 160px;
@@ -363,18 +370,22 @@ ul {
     font-size: 16px;
 		display: block;
 		margin: 0 auto;
+		margin-bottom: 7px;
 }
 
 #select_username {
 	text-align: left;
+	border-radius: 5px;
 	background-color: #fbfbfb;
 	display: block;
 	margin: 0 auto;
-	padding: 10px 95px;
+	margin-top: 15px;
+	padding: 10px 97px;
 }
 #message {
 	display: block;
 	margin: 0 auto;
+	border-radius: 5px;
 	background-color: #fbfbfb;
 	padding: 50px 95px;
 	margin-top: 10px;
@@ -384,27 +395,57 @@ ul {
 
 /*              settings section
              */
-select {
-padding: 15px 30px;
+.user-timezone {
+	text-align: center;
+	margin-top: 15px;
+}
+.user-timezone select{
+width:60%;
+padding: 40px;
+margin-top: 10px;
 background-color: lightgrey;
+margin-bottom: 15px;
+}
+.on{
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+.off{
+	margin-left: 70px;
+	margin-bottom: 30px;
+}
+.switch-ios.switch-light{
+	width: 20%;
+	display: inline-block;
+}
+.switch-ios.switch-light input:checked ~ span a {
+    border-color: grey;
+}
+.switch-ios.switch-light input:checked ~ span {
+    background-color:  #7377bf;
+		box-shadow: inset 0 0 0 30px #7377bf;
+    }
+.settingsField{
+ text-align: center;
 }
 .settingsButton {
     border: none;
     color: white;
-    padding: 15px 50px;
-    text-align: center;
-    display: inline-block;
+		margin-top: 15px;
+    padding: 15px 60px;
+		border-radius: 10px;
     font-size: 16px;
-		margin: 0 auto;
 }
+.settings {
 
+}
 .save {
 	background-color: #7377bf;
-	text-align: center;
+
 }
 .cancel {
 	background-color: #b2b2b2;
-	text-align: center;
+
 }
 
 
@@ -478,17 +519,21 @@ background-color: lightgrey;
  grid-area: section;
  display: grid;
  grid-template-columns: 1fr 1fr;
- grid-template-rows: 300px 325px;
+ grid-template-rows: 350px 350px;
 
  grid-template-areas:
  "members activity"
  "users settings";
 }
  .name{
-	 font-size:10px;
+	 font-size:14px;
  }
+
  .dailyTraffic{
 	 padding-left: 5px;
+ }
+ .off{
+ 	margin-bottom: 45px;
  }
 }
 
@@ -498,7 +543,7 @@ background-color: lightgrey;
    /*  nav/header */
    .container {
      grid-template-columns: 80px 1fr;
-     grid-template-rows:50px minmax(150, auto);
+     grid-template-rows:70px minmax(150px, auto);
      grid-template-areas:
      "header header"
      "nav main"
@@ -509,7 +554,7 @@ background-color: lightgrey;
 	  grid-area: section;
 	  display: grid;
 	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 350px 325px;
+	  grid-template-rows: 350px 350px;
 
 	  grid-template-areas:
 	  "members activity"
@@ -579,7 +624,7 @@ background-color: lightgrey;
 	 	 font-size:16px;
 	  }
 		#select_username {
-			padding: 10px 140px;
+			padding: 10px 145px;
 		}
 		#message {
 			padding: 50px 140px;

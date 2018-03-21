@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="styles/toggle-switch.css" rel="stylesheet" />
+    <link href="css/toggle-switch.css" rel="stylesheet" />
     <link href="css/grid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -109,22 +109,22 @@
             <div class="memberOne">
             <h3>New Members</h3>
               <img class="icon" src="icons/1.jpg" alt="avatar" height= "40" width="40">
-              <p class="name">Jonathan Keen </p><br><p class="email">JKeen@gmail.com</p>
+              <p class="name last">Jonathan Keen </p><br><p class="email">JKeen@gmail.com</p>
               <p class="date"> 3/15/18 </p>
             </div>
         <div class="memberOne">
             <img class="icon" src="icons/2.jpg" alt="avatar" height= "40" width="40">
-            <p class="name">Gary Long </p><br><p class="email">GaryL@gmail.com</p>
+            <p class="name last">Gary Long </p><br><p class="email">GaryL@gmail.com</p>
             <p class="date"> 3/16/18 </p>
       </div>
       <div class="memberOne">
           <img class="icon" src="icons/3.jpg" alt="avatar" height= "40" width="40">
-          <p class="name">Anna Wu </p><br><p class="email">AnnaWu@gmail.com</p>
+          <p class="name last">Anna Wu </p><br><p class="email">AnnaWu@gmail.com</p>
           <p class="date"> 3/17/18 </p>
     </div>
       <div class="memberOne">
           <img class="icon" src="icons/4.jpg" alt="avatar" height= "40" width="40">
-          <p class="name"> Lynn Gilkey </p><br><p class="email">LynnG@gmail.com</p>
+          <p class="name last"> Lynn Gilkey </p><br><p class="email">LynnG@gmail.com</p>
           <p class="date"> 3/18/18 </p>
     </div></div>
           </div>
@@ -156,6 +156,7 @@
           </div></div>
             </div>
 
+
             <div class="users">
               <h3> Message User </h3>
               <div class="searchField">
@@ -163,27 +164,41 @@
                   <input id="select_username" type="text" placeholder="Search For User">
 
             <textarea id="message" placeholder="Message for User"></textarea>
-               <button class="send" type="submit">Send</button>
+
+ <button id="btn" class="send" type="submit">Send</button><p id="success"></p>
 
              </form></div>
               </div>
 
 
               <div class="settings">
-                <h3> Settings </h3>
-                <label class="switch-light switch-candy" onclick="">
+                <h3> Settings </h3><div class="settingsField">
+                  <div class="spanOne">Send Email Notifications
+                <label class="switch-light switch-ios on" onclick="">
                   <input type="checkbox">
 
-                  <strong>
-                    Send Email Notifications
-                  </strong>
+
 
                   <span>
                     <span>Off</span>
                     <span>On</span>
                     <a></a>
-                  </span>
-                  </label>
+                  </span></label></div>
+
+
+                  <div class="spanTwo">
+                      Set Profile To Public
+                  <label class="switch-light switch-ios off" onclick="">
+                    <input type="checkbox">
+
+                    <span>
+                      <span>Off</span>
+                      <span>On</span>
+                      <a></a>
+                    </span>
+                    </label>
+                  </div>
+
 
                   <div class="user-timezone">
                    <select name="timezone">
@@ -199,10 +214,11 @@
                  </div>
                   <button class="settingsButton save">SAVE</button>
                   <button class="settingsButton cancel">CANCEL</button>
-
+                </div>
+                </div>
                 </div>
               </div>
-              </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>
