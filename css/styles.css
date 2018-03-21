@@ -196,6 +196,12 @@ ul {
 		padding-bottom: 5px;
 
 	}
+	.Weekly{
+		padding: 3px;
+		border-radius: 5px;
+		color:white;
+		background-color: #51ba83;
+	}
 	.timeline li:hover {
 		color: white;
 		background-color: #51ba83;

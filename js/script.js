@@ -1,4 +1,7 @@
-            // bar chart //
+function myalert() {
+    alert("You have two new followers and three unread messages");
+}
+           // bar chart //
 var ctx = document.getElementById("barChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
