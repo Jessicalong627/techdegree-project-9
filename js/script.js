@@ -2,6 +2,7 @@ function myalert() {
     alert("You have two new followers and three unread messages");
 }
            // bar chart //
+           
 var ctx = document.getElementById("barChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -108,6 +109,8 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+
 const button = document.getElementById("btn");
 const user = document.getElementById("select_username");
 const message = document.getElementById("message");

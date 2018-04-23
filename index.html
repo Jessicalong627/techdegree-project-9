@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>My App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,215 +11,252 @@
     <link href="css/grid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-  </head>
-  <body>
+</head>
 
-
+<body>
 
     <div class="container">
-      <div class="header">
-          <ul class = "top-nav">
-            <li class="names"><strong>Jackie</strong>App&trade;</li>
-            <li><img class="bell" src="icons/icon-bell.svg" alt="bell" width="25" onclick="myalert()"><p class ="circle"></p></li>
-            <li class="border"><img class="avatar" src="icons/5.jpg" alt="avatar" height= "40" width="40"></li>
-            <li>Jackie Craft</li>
+        <div class="header">
+            <ul class="top-nav">
+                <li class="names"><strong>Jackie</strong>App&trade;</li>
+                <li><img class="bell" src="icons/icon-bell.svg" alt="bell" width="25" onclick="myalert()">
+                    <p class="circle"></p>
+                </li>
+                <li class="border"><img class="avatar" src="icons/5.jpg" alt="avatar" height="40" width="40"></li>
+                <li>Jackie Craft</li>
 
-          </ul>
-      </div>
-
-      <div class="nav">
-        <ul class="left-nav">
-          <li><a href="dashboard"><img src="icons/icon-dashboard.svg" alt="dashboard" width="25"> </a> </li>
-          <li><a href="members"><img src="icons/icon-members.svg" alt="members" width="25"></a></li>
-          <li><a href="visits"><img src="icons/icon-visits.svg" alt="visits" width="25"></a></li>
-          <li><a href="settings"><img src="icons/icon-settings.svg" alt="settings" width="25"></a></li>
-
-        </ul>
-      </div>
-
-      <div class="main">
-          <div class="search">
-              <h2> Dashboard </h2> <input class="searchBar" type='text' placeholder='Search' id='search-text-input' />
-              <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            <strong>Alert!</strong> You have five new members today!
-          </div></div>
-
-
-          <div class="lineChart">
-                <div class="line">
-                  <ul class="timeline">
-                  <li class="traffic">Traffic</li>
-                  <li class="Hourly">Hourly</li>
-                  <li class="Daily">Daily</li>
-                  <li class="Weekly">Weekly</li>
-                  <li class="Monthly">Monthly</li>
-              </ul>
-                  <canvas id="lineChart" ></canvas>
-      </div>
-          </div>
-
-          <div class="barChart">
-
-            <div class="bar">
-              <h3 class= "dailyTraffic"> Daily Traffic </h3><br>
-              <canvas id="barChart" ></canvas>
-            </div>
-          </div>
-
-          <div class="donutChart">
-
-            <div class="donut">
-              <h3 class="mobile"> Mobile Users </h3>
-              <canvas id="donutChart"></canvas>
-            </div>
-          </div>
-     </div>
-
-      <div class="aside">
-
-          <div class="socialStats">
-            <h3 class="stats"> Social Stats </h3>
-           <div id= "twitter" class="icons">
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-         <path d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"/>
-       </svg><div class="group">
-        <h4 class="social"> Twitter</h4><br>
-        <h2 class="numbers"> 10,345 </h2>
-      </div></div>
-
-          <div id= "facebook" class="icons">
-            <svg enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
-            <div class="group">
-       <h4 class="social"> Facebook</h4><br>
-       <h2 class="numbers"> 3,739 </h2>
-     </div></div>
-
-       <div id= "google" class="icons">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-          <path d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z"/>
-        </svg><div class="group">
-        <h4 class="social"> Google+</h4><br>
-        <h2 class="numbers"> 2,530 </h2></div>
-      </div> </div>
-      </div>
-
-
-      <div class="section">
-        <div class="members"><div class="sectionTwo">
-            <div class="memberOne">
-            <h3>New Members</h3>
-              <img class="icon" src="icons/1.jpg" alt="avatar" height= "40" width="40">
-              <p class="name last">Jonathan Keen </p><br><p class="email">JKeen@gmail.com</p>
-              <p class="date"> 3/15/18 </p>
-            </div>
-        <div class="memberOne">
-            <img class="icon" src="icons/2.jpg" alt="avatar" height= "40" width="40">
-            <p class="name last">Gary Long </p><br><p class="email">GaryL@gmail.com</p>
-            <p class="date"> 3/16/18 </p>
-      </div>
-      <div class="memberOne">
-          <img class="icon" src="icons/3.jpg" alt="avatar" height= "40" width="40">
-          <p class="name last">Anna Wu </p><br><p class="email">AnnaWu@gmail.com</p>
-          <p class="date"> 3/17/18 </p>
-    </div>
-      <div class="memberOne">
-          <img class="icon" src="icons/4.jpg" alt="avatar" height= "40" width="40">
-          <p class="name last"> Lynn Gilkey </p><br><p class="email">LynnG@gmail.com</p>
-          <p class="date"> 3/18/18 </p>
-    </div></div>
-          </div>
-
-
-
-
-          <div class="activity"><div class="sectionTwo">
-            <div class="memberOne">
-              <h3> Recent Activity </h3>
-                <img class="icon" src="icons/1.jpg" alt="avatar" height= "40" width="40">
-                <p class="name">Jonathan Keen commented on <strong>YourApp's SEO Tips</strong></p><br><p class="days">4 hours ago</p>
-                <p class="arrow"> &#8250; </p>
-          </div>
-          <div class="memberOne">
-              <img class="icon" src="icons/2.jpg" alt="avatar" height= "40" width="40">
-              <p class="name">Gary Long liked the post <strong>Facebook Changes</strong> </p><br><p class="days">5 hours ago</p>
-              <p class="arrow"> &#8250; </p>
+            </ul>
         </div>
-        <div class="memberOne">
-            <img class="icon" src="icons/3.jpg" alt="avatar" height= "40" width="40">
-            <p class="name">Anna Wu commented on <strong>Facebook's Changes</strong> </p><br><p class="days">7 hours ago </p>
-            <p class="arrow"> &#8250; </p>
-      </div>
-        <div class="memberOne">
-            <img class="icon" src="icons/4.jpg" alt="avatar" height= "40" width="40">
-            <p class="name"> Lynn Gilkey posted <strong> YourApp's SEO Tips</strong></p><br><p class="days">1 day ago</p>
-            <p class="arrow"> &#8250; </p>
-          </div></div>
+
+        <div class="nav">
+            <ul class="left-nav">
+                <li>
+                    <a href="dashboard"><img src="icons/icon-dashboard.svg" alt="dashboard" width="25"> </a>
+                </li>
+                <li>
+                    <a href="members"><img src="icons/icon-members.svg" alt="members" width="25"></a>
+                </li>
+                <li>
+                    <a href="visits"><img src="icons/icon-visits.svg" alt="visits" width="25"></a>
+                </li>
+                <li>
+                    <a href="settings"><img src="icons/icon-settings.svg" alt="settings" width="25"></a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="search">
+                <h2> Dashboard </h2>
+                <input class="searchBar" type='text' placeholder='Search' id='search-text-input' />
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Alert!</strong> You have five new members today!
+                </div>
             </div>
 
+            <div class="lineChart">
+                <div class="line">
+                    <ul class="timeline">
+                        <li class="traffic">Traffic</li>
+                        <li class="Hourly">Hourly</li>
+                        <li class="Daily">Daily</li>
+                        <li class="Weekly">Weekly</li>
+                        <li class="Monthly">Monthly</li>
+                    </ul>
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+
+            <div class="barChart">
+
+                <div class="bar">
+                    <h3 class="dailyTraffic"> Daily Traffic </h3>
+                    <br>
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+
+            <div class="donutChart">
+
+                <div class="donut">
+                    <h3 class="mobile"> Mobile Users </h3>
+                    <canvas id="donutChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="aside">
+
+            <div class="socialStats">
+                <h3 class="stats"> Social Stats </h3>
+                <div id="twitter" class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z" />
+                    </svg>
+                    <div class="group">
+                        <h4 class="social"> Twitter</h4>
+                        <br>
+                        <h2 class="numbers"> 10,345 </h2>
+                    </div>
+                </div>
+
+                <div id="facebook" class="icons">
+                    <svg enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z" />
+                    </svg>
+                    <div class="group">
+                        <h4 class="social"> Facebook</h4>
+                        <br>
+                        <h2 class="numbers"> 3,739 </h2>
+                    </div>
+                </div>
+
+                <div id="google" class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z" />
+                    </svg>
+                    <div class="group">
+                        <h4 class="social"> Google+</h4>
+                        <br>
+                        <h2 class="numbers"> 2,530 </h2></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="members">
+                <div class="sectionTwo">
+                    <div class="memberOne">
+                        <h3>New Members</h3>
+                        <img class="icon" src="icons/1.jpg" alt="avatar" height="40" width="40">
+                        <p class="name last">Jonathan Keen </p>
+                        <br>
+                        <p class="email">JKeen@gmail.com</p>
+                        <p class="date"> 3/15/18 </p>
+                    </div>
+                    <div class="memberOne">
+                        <img class="icon" src="icons/2.jpg" alt="avatar" height="40" width="40">
+                        <p class="name last">Gary Long </p>
+                        <br>
+                        <p class="email">GaryL@gmail.com</p>
+                        <p class="date"> 3/16/18 </p>
+                    </div>
+                    <div class="memberOne">
+                        <img class="icon" src="icons/3.jpg" alt="avatar" height="40" width="40">
+                        <p class="name last">Anna Wu </p>
+                        <br>
+                        <p class="email">AnnaWu@gmail.com</p>
+                        <p class="date"> 3/17/18 </p>
+                    </div>
+                    <div class="memberOne">
+                        <img class="icon" src="icons/4.jpg" alt="avatar" height="40" width="40">
+                        <p class="name last"> Lynn Gilkey </p>
+                        <br>
+                        <p class="email">LynnG@gmail.com</p>
+                        <p class="date"> 3/18/18 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="sectionTwo">
+                    <div class="memberOne">
+                        <h3> Recent Activity </h3>
+                        <img class="icon" src="icons/1.jpg" alt="avatar" height="40" width="40">
+                        <p class="name">Jonathan Keen commented on <strong>YourApp's SEO Tips</strong></p>
+                        <br>
+                        <p class="days">4 hours ago</p>
+                        <p class="arrow"> &#8250; </p>
+                    </div>
+                    <div class="memberOne">
+                        <img class="icon" src="icons/2.jpg" alt="avatar" height="40" width="40">
+                        <p class="name">Gary Long liked the post <strong>Facebook Changes</strong> </p>
+                        <br>
+                        <p class="days">5 hours ago</p>
+                        <p class="arrow"> &#8250; </p>
+                    </div>
+                    <div class="memberOne">
+                        <img class="icon" src="icons/3.jpg" alt="avatar" height="40" width="40">
+                        <p class="name">Anna Wu commented on <strong>Facebook's Changes</strong> </p>
+                        <br>
+                        <p class="days">7 hours ago </p>
+                        <p class="arrow"> &#8250; </p>
+                    </div>
+                    <div class="memberOne">
+                        <img class="icon" src="icons/4.jpg" alt="avatar" height="40" width="40">
+                        <p class="name"> Lynn Gilkey posted <strong> YourApp's SEO Tips</strong></p>
+                        <br>
+                        <p class="days">1 day ago</p>
+                        <p class="arrow"> &#8250; </p>
+                    </div>
+                </div>
+            </div>
 
             <div class="users">
-              <h3> Message User </h3>
-              <div class="searchField">
-                <form class="message" action="index.html" method="post">
-                  <input id="select_username" type="text" placeholder="Search For User">
+                <h3> Message User </h3>
+                <div class="searchField">
+                    <form class="message" action="index.html" method="post">
+                        <input id="select_username" type="text" placeholder="Search For User">
 
-            <textarea id="message" placeholder="Message for User"></textarea>
+                        <textarea id="message" placeholder="Message for User"></textarea>
 
- <button id="btn" class="send" type="submit">Send</button><p id="success"></p>
+                        <button id="btn" class="send" type="submit">Send</button>
+                        <p id="success"></p>
 
-             </form></div>
-              </div>
+                    </form>
+                </div>
+            </div>
 
+            <div class="settings">
+                <h3> Settings </h3>
+                <div class="settingsField">
+                    <div class="spanOne">Send Email Notifications
+                        <label class="switch-light switch-ios on" onclick="">
+                            <input type="checkbox">
 
-              <div class="settings">
-                <h3> Settings </h3><div class="settingsField">
-                  <div class="spanOne">Send Email Notifications
-                <label class="switch-light switch-ios on" onclick="">
-                  <input type="checkbox">
-
-
-
-                  <span>
+                            <span>
                     <span>Off</span>
-                    <span>On</span>
-                    <a></a>
-                  </span></label></div>
+                            <span>On</span>
+                            <a></a>
+                            </span>
+                        </label>
+                    </div>
 
+                    <div class="spanTwo">
+                        Set Profile To Public
+                        <label class="switch-light switch-ios off" onclick="">
+                            <input type="checkbox">
 
-                  <div class="spanTwo">
-                      Set Profile To Public
-                  <label class="switch-light switch-ios off" onclick="">
-                    <input type="checkbox">
-
-                    <span>
+                            <span>
                       <span>Off</span>
-                      <span>On</span>
-                      <a></a>
-                    </span>
-                    </label>
-                  </div>
+                            <span>On</span>
+                            <a></a>
+                            </span>
+                        </label>
+                    </div>
 
+                    <div class="user-timezone">
+                        <select name="timezone">
+                            <option value="" disabled selected>Select Timezone</option>
+                            <option value="-10.0">(GMT -10:00) Hawaii</option>
+                            <option value="-9.0">(GMT -9:00) Alaska</option>
+                            <option value="-8.0">(GMT -8:00) Pacific Time</option>
+                            <option value="-7.0">(GMT -7:00) Mountain Time</option>
+                            <option value="-6.0">(GMT -6:00) Central Time</option>
+                            <option value="-5.0">(GMT -5:00) Eastern Time</option>
 
-                  <div class="user-timezone">
-                   <select name="timezone">
-                    <option value="" disabled selected>Select Timezone</option>
-                       <option value="-10.0">(GMT -10:00) Hawaii</option>
-                       <option value="-9.0">(GMT -9:00) Alaska</option>
-                       <option value="-8.0">(GMT -8:00) Pacific Time</option>
-                       <option value="-7.0">(GMT -7:00) Mountain Time</option>
-                       <option value="-6.0">(GMT -6:00) Central Time</option>
-                       <option value="-5.0">(GMT -5:00) Eastern Time</option>
-
-                 </select>
-                 </div>
-                  <button class="settingsButton save">SAVE</button>
-                  <button class="settingsButton cancel">CANCEL</button>
+                        </select>
+                    </div>
+                    <button class="settingsButton save">SAVE</button>
+                    <button class="settingsButton cancel">CANCEL</button>
                 </div>
-                </div>
-                </div>
-              </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
-  </body>
+</body>
+
 </html>
